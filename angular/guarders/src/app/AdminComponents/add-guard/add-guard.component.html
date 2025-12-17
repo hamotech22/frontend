@@ -1,0 +1,40 @@
+<app-admin-navbar></app-admin-navbar>
+
+    <!---------------------------------------<< validation >>------------------------------------->
+
+<div class="container">
+    <h1 class="text-center m-5 ">Add New body Guard</h1>
+ <form #f="ngForm" >
+    <div class="row text-left">
+        <div class="col-12 col-md-6 form-gropu">
+            <label>name</label>
+            <input type="text" id="name" class="form-control mb-2"  #name="ngModel" ngModel name="name"   minlength="5" required [(ngModel)]="guards.name" />
+    
+            <span *ngIf=" name.touched && name.errors?.['required'] " class="text-danger"  >this filed is  required</span>     
+            <span *ngIf=" name.touched &&  name.errors?.['minlength']" class="text-danger "  >this input must be at least 5 characters. </span>     
+               
+        </div>
+        <div class="col-12 col-md-6 form-gropu">
+            <label>image</label>
+            <input type="file" id="photo" placeholder="photo"  class="form-control mb-2" name="photo" #photo="ngModel" ngModel required  (change)="getimagepath($event)" />
+            <span *ngIf="photo.isDisabled " class="text-danger "  >this filed is  required</span>     
+        </div>
+        <div class="col-12 form-gropu">
+            <label>Description</label>
+            <input type="text" id="description" placeholder="description" class="form-control mb-2" name="description" #description="ngModel" ngModel required [(ngModel)]="guards.description" minlength="4" />
+            <span *ngIf=" description.touched && description.errors?.['required'] " class="text-danger "  >this filed is  required</span>  
+            <span *ngIf="description.errors?.['minlength']" class="text-danger">description must me at least 4 characters. </span>
+        </div>
+       
+     </div>
+     <button (click)="submit(f)" [disabled]="f.invalid" class="btn btn-primary">submit</button>
+     <div class="col-12 form-gropu alert alert-success mt-3" *ngIf="message">
+        the new guard is added seccessfuly  
+     </div>
+ </form>
+
+
+</div> 
+
+
+

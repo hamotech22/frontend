@@ -1,0 +1,44 @@
+
+<section>
+    <div class="container col-8 mt-5 ">
+        <h1>Add New Adminstrator</h1>
+        <div class=" text-light">
+            <form #registerForm="ngForm">
+                <div class="form-group mb-3 text-left">
+                    <label for="">Name</label>
+                    <input name="name"  #name="ngModel" [(ngModel)]="admin.name" type="text" class="form-control" minlength="5" required>
+
+                    <span *ngIf=" name.touched && name.errors?.['required'] " class="text-danger "  >this filed is  required</span>     
+                    <span *ngIf=" name.touched &&  name.errors?.['minlength']" class="text-danger "  >this input must be at 5 char. </span> 
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">email</label>
+                    <input name="email"  #email="ngModel" [(ngModel)]="admin.email" type="email" class="form-control" required email>
+                    <span *ngIf=" email.touched && email.errors?.['required'] " class="text-danger "  >this filed is  required</span> 
+                    <span *ngIf=" email.touched && email.errors?.['email'] " class="text-danger "  >Please enter a valid email address.  </span> 
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">phone</label>
+                    <input name="phone" placeholder="01xxxxxxxxx" #phone="ngModel" type="number" class="form-control"  maxlength="13" [(ngModel)]="admin.phone" required>
+                    <span *ngIf=" phone.touched && phone.errors?.['required'] " class="text-danger "  >phone number is  required</span>  
+                    
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">password</label>
+                    <input name="password" #password="ngModel" [(ngModel)]="admin.password" type="password" class="form-control" required >
+                    <span *ngIf=" password.touched && password.errors?.['required'] " class="text-danger "  >this filed is  required</span> 
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">location</label>
+                    <input name="text" #location="ngModel" [(ngModel)]="admin.location" type="location" class="form-control location" required >
+                    <span *ngIf=" location.touched && location.errors?.['required'] " class="text-danger "  >this filed is  required</span> 
+                </div>
+                <div class="form-group mb-3">
+                    <button *ngIf="registerForm.valid" (click)="onSubmit(registerForm)" class="btn btn-primary ">Add New Admin</button>   
+                    <button *ngIf="!registerForm.valid" disabled  class="btn btn-primary ">submit</button>   
+                </div>
+            </form>
+        </div>
+    </div>   
+</section>
+

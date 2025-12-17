@@ -1,0 +1,22 @@
+section nav{
+    padding: 1px;
+    
+}
+nav a{
+    color: white;
+    font-size: 15px;
+    text-transform:capitalize;
+    padding: 5px;
+
+}
+nav a:hover{
+    color: gray;
+    transition: 0.3s;
+}
+
+nav .navbar-brand{
+    color: red;
+    font-size: large;
+    font-size: 20px;
+    font-weight: bold;
+}

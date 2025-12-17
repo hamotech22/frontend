@@ -1,0 +1,42 @@
+<app-admin-navbar></app-admin-navbar>
+<section>
+    <!---------------------------------------<< validation >>------------------------------------->
+
+<div class="container">
+    <h1 class="text-center m-5 ">update Guard</h1>
+ <div class="row text-left">
+    <div class="col-12 col-md-6 form-gropu">
+        <label>name</label>
+        <input type="text" id="name" class="form-control mb-2"  #name="ngModel" ngModel    minlength="5" required [(ngModel)]="guards.name" />
+
+        <span *ngIf=" name.touched && name.errors?.['required'] " class="alert alert-danger "  >this filed is  required</span>     
+        <span *ngIf=" name.touched &&  name.errors?.['minlength']" class="alert alert-danger "  >this input must be at 5 char. </span>     
+           
+    </div>
+    <div class="col-12 col-md-6 form-gropu">
+        <label>image</label>
+        <input type="file" id="photo" placeholder="photo"  class="form-control mb-2" name="photo" #photo="ngModel" ngModel required  (change)="getimagepath($event)" />
+        
+        <span *ngIf="photo.dirty && photo.errors?.['required'] " class="text-danger "  >this filed is  required</span>     
+        
+    </div>
+    
+      
+   
+      
+    <div class="col-12 form-gropu">
+        <label>Description</label>
+        <input type="text" id="description" placeholder="description" class="form-control mb-2 description" #description="ngModel" ngModel required [(ngModel)]="guards.description"  />
+        <span *ngIf=" description.touched && description.errors?.['required'] " class="alert alert-danger "  >this filed is  required</span>  
+    </div>
+   
+ </div>
+
+
+
+   <button (click)="update()" class="btn btn-primary">update</button>
+   <div class="col-12 form-gropu alert alert-success mt-3" *ngIf="message">
+     seccessfuly
+   </div>
+</div> 
+</section>

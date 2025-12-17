@@ -1,0 +1,17 @@
+.container{
+    height: 70vh;
+    align-items: center;
+    /* padding-top: 50px; */
+   
+}
+section{
+    display: flex;
+    
+}
+h1{
+    padding-top: 100px;
+}
+
+#description{
+    padding: 50px 10px;
+}

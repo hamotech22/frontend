@@ -1,0 +1,22 @@
+<app-admin-navbar></app-admin-navbar>
+    <h1 class="m-5">Newsletter</h1>
+   <div class="container">
+    <table class="table table-dark ">
+       <tr class="table table-info">
+        <th>id</th>
+        <th>email</th>
+        <th>Options</th>
+       </tr>
+  
+            <ng-container *ngFor="let data of newsdata; let i = index">
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{data.email}}</td>
+                    <button class="btn btn-danger m-1" (click)="delete(data.id)">delete</button>
+                </tr>
+            </ng-container>
+ 
+    </table>
+   </div>
+    
+

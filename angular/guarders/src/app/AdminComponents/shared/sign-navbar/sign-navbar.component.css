@@ -1,0 +1,17 @@
+section nav{
+    padding: 25px;
+    
+}
+nav a{
+    color: white;
+    font-size: 17px;
+    text-transform:capitalize;
+
+}
+
+nav .navbar-brand{
+    color: red;
+    font-size: large;
+    font-size: 30px;
+    font-weight: bold;
+}

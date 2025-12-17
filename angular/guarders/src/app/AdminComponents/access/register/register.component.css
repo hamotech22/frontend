@@ -1,0 +1,20 @@
+section{
+    height: auto;
+    padding: 200px 0px;
+    /* background-image: url(/assets/images/login.jpg); */
+    background-image: linear-gradient(rgba(19, 21, 22, 0.7), rgba(20, 21, 22, 0.7)),url(/assets/images/login.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+h2{
+    padding-top: 100px;
+    color: black;
+    font-weight: bold;
+}
+
+span{
+    cursor: pointer;
+}

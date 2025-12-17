@@ -1,0 +1,180 @@
+<app-admin-navbar></app-admin-navbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
+    <title>Dashboard</title>
+</head>
+<body>
+
+
+
+
+    <h2 class="text-center m-5">Dashboard</h2>
+   <section >
+    <div class="menu">
+        <ul>
+            <li class="profile">
+            <div class="img-box">
+            </div>
+            <div *ngIf="admin">
+                <h6 class="text-info">hi,{{admin.name}}</h6> 
+            </div>
+            <p *ngIf="!admin">unknown</p>
+        </li>
+        <li>
+            <a  routerLink="/home" class="active">
+                <i class="fas fa-home"></i>
+                <p>home</p>
+            </a>
+        </li>
+        <li >
+            
+            <a (click)="showComponent('/list-user')" routerLinkActive="active" >
+                <i class="fas fa-user-group"></i>
+                <p>subscribers   </p>
+            </a>
+        </li>
+        
+        <li >
+            <a (click)="showComponent('/admin/list-admin')">
+                <i class="fas fa-user-group"></i>
+                <p>administrators</p>
+            </a>
+        </li>
+     
+        
+        <li>
+            <a  (click)="showComponent('/view-guards')" routerLinkActive="active" >
+                <i class="fas fa-user-group"></i>
+                <p>bodyguards</p>
+            </a>
+        </li>
+        <li>
+            <a (click)="showComponent('/admin/list-clinet')" routerLinkActive="active" >
+                <i class="fas fa-user-group"></i>
+                <p>customers </p>
+            </a>
+        </li>
+        <li>
+            <a (click)="showComponent('/admin/newsletter-list')" routerLinkActive="active" >
+                <i class="fas fa-message"></i>
+                <p>newsletter  </p>
+            </a>
+        </li>
+
+        
+      
+  
+
+        <!---------------------------------------<< menu >>----------------------------------------->
+
+      <div class="menu-2">
+        <li>
+            <a (click)="showComponent('/admin/add-guard')" routerLinkActive="active" >
+                <i class="fas fa-user"></i>
+                <p>new_guard</p>
+            </a>
+        </li>
+        
+       
+        <li >
+            <a  (click)="showComponent('/add-admin')">
+                <i class="fas fa-user"></i>
+                <p>new_admin</p>
+            </a>
+        </li>
+        
+        <li class="log-out">
+            <a routerLink="" (click)="logOut()"  class="logout">
+                <i class="fas fa-sign-out text-danger"></i>
+                <p >log Out</p>
+            </a>
+        </li>
+      </div>
+       
+        </ul>
+    </div>
+
+
+    <!----------------------------------------<< content dashboard >>---------------------------->
+    <div class="content">
+        <div class="title-info">
+            <p>dashboard</p>
+            <i class="fas fa-chart-bar"></i>
+        </div>
+        <div class="data-info">
+            <div class="box" (click)="showComponent('/list-user')">
+                <i class="fas fa-user-group"></i>
+                <div class="data">
+                    <p>subscriber</p>
+                    <span>{{usertotalItem}}</span>
+                </div>
+            </div>
+            <div class="box" (click)="showComponent('/admin/newsletter-list')" >
+                    <i class="fas fa-message"></i>
+                <div class="data">
+                    <p>newsletter</p>
+                    <span>{{newslettertotalItem}}</span>
+                </div>
+            </div>
+            <div  class="box" (click)="showComponent('/view-guards')" >
+            
+                <i class="fas fa-user-group"></i>
+                <div class="data">
+                    <p>view all bodyguard</p>
+                    <span>{{guardtotalItem}}</span>
+                </div>
+            </div>
+            <div class="box" (click)="showComponent('/admin/list-clinet')">
+                <i class="fas fa-user-group"></i>
+                <div class="data">
+                    <p>view all customer</p>
+                    <span>{{custmtotalItem}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-info">
+            <p>.</p>
+            <i class="fas fa-chart-bar"></i>
+        </div>
+
+
+        <div class="dashboard-container">
+            <div class="content ">
+              <!-- عرض الكمبوننت المطلوب حسب قيمة currentComponent -->
+              <app-guards-list *ngIf="currentComponent === '/view-guards'"></app-guards-list>
+              <app-user-list *ngIf="currentComponent === '/list-user'"></app-user-list>
+              <app-add-guard *ngIf="currentComponent === '/admin/add-guard'"></app-add-guard>
+              <app-customer-list *ngIf="currentComponent === '/admin/list-clinet'"></app-customer-list>
+              <app-add-admin *ngIf="currentComponent === '/add-admin'"></app-add-admin>
+              <app-all-admins *ngIf="currentComponent === '/admin/list-admin'"></app-all-admins> 
+              <app-newsletter-list *ngIf="currentComponent === '/admin/newsletter-list'"></app-newsletter-list>            
+            </div>
+          </div>
+
+          
+      
+    </div>
+   </section>
+
+ 
+  
+
+
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+</body>
+</html>

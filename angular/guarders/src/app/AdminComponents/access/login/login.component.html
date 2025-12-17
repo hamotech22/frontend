@@ -1,0 +1,53 @@
+<!-- <app-sign-navbar></app-sign-navbar> -->
+ <app-navbar></app-navbar>
+
+
+<section>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-6 m-auto">
+                 <h2 class="mb-5 text-light">Login</h2>
+                <div class="card">
+                     
+                    <div class="card-body">
+                          <!-- Success Message -->
+             <div *ngIf="isSubmitted" class="alert alert-success mt-3 form-group">
+                logged in successfully!
+            </div>
+            <!-- unsuccess messaage-->
+            <div *ngIf="unSubmitted" class="alert alert-danger">
+                {{message}}
+            </div>
+                        <form  #loginForm="ngForm">
+                        
+                            <div class="form-group mb-3 text-left ">
+                    <label for="">email</label>
+                    <input name="email"  #email="ngModel" [(ngModel)]="admin.email" type="email" placeholder="email" class="form-control" minlength="6" required>
+                    <span *ngIf=" email.touched && email.errors?.['required'] " class="text-danger"  >this filed is  required</span>     
+                    <span *ngIf=" email.touched &&  email.errors?.['minlength']" class="text-danger "  >this input must be at 6 char, and well be an Email. </span> 
+                           </div>
+
+                             <div class="form-group mb-3 text-left">
+                    <label for="">password</label>
+                    <input name="password" #password="ngModel" [(ngModel)]="admin.password" placeholder="paassword" type="password" class="form-control" required >
+                    <span *ngIf=" password.touched && password.errors?.['required'] " class="text-danger "  >this filed is  required</span> 
+                            </div>  
+                              
+                          <div class="form-group mb-3">
+                    <button *ngIf="loginForm.valid" (click)="onLogin(loginForm)" class="btn btn-primary ">login</button>   
+                    <button *ngIf="!loginForm.valid" disabled  class="btn btn-primary ">login</button>   
+                          </div>
+                          <div class="form-group mb-3 text-dark">
+                           <p>you don't have accound ? <span  routerLink="/register" class="text-primary sign">Login</span> </p>
+                
+                          </div>
+                       </form>
+
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

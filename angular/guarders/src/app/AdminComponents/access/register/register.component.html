@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<section>
+    
+    <div class="container ">
+        <h2 class="m-5 text-light">Register </h2>  
+        <div class="row">
+       <div class="col-12 col-sm-8 col-md-6 m-auto ">
+        <div class="card">
+            <div class="card-body">
+                         
+            <div *ngIf="issuccess" class=" text-center alert alert-danger mb-2">
+                this email already exsist !
+             </div>
+             <div *ngIf="issuccess2" class=" text-center alert alert-success b-2">
+                 a new user has been created !
+             </div>
+            <form #registerForm="ngForm">
+                <div class="form-group mb-3 text-left">
+                    <label for="">Name</label>
+                    <input name="name" #name="ngModel" [(ngModel)]="user.name" type="text" placeholder="full name" class="form-control"minlength="5" required>
+                    <span *ngIf=" name.touched && name.errors?.['required'] " class="text-danger"  >this filed is  required</span>     
+                    <span *ngIf=" name.touched &&  name.errors?.['minlength']" class="text-danger "  >this input must be at 6 char, and well be an Email. </span> 
+                </div>        
+                <div class="form-group mb-3 text-left">
+                    <label for="">email</label>
+                    <input name="email"  #email="ngModel" [(ngModel)]="user.email" type="email" placeholder="email" class="form-control" email required>
+                    <span *ngIf=" email.touched && email.errors?.['required'] " class="text-danger"  >this filed is  required</span>  
+                    <span *ngIf="email.touched && email.errors?.['email']" class="text-danger">invalid email format  </span>   
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">phone</label>
+                    <input name="text" #phone="ngModel" [(ngModel)]="user.phone" type="number" placeholder="phone" class="form-control" required >
+                    <span *ngIf=" phone.touched && phone.errors?.['required'] " class="text-danger "  >this filed is  required</span>     
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">location</label>
+                    <input name="location" #location="ngModel" [(ngModel)]="user.location" type="text" placeholder="location" class="form-control" required >
+                    <span *ngIf=" location.touched && location.errors?.['required'] " class="text-danger "  >this filed is  required</span>     
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="">password</label>
+                    <input name="password" #password="ngModel" [(ngModel)]="user.password" type="password" placeholder="pssword" class="form-control" required >
+                    <span *ngIf=" password.touched && password.errors?.['required'] " class="text-danger"  >this filed is  required</span>     
+                </div>
+                 <!-- Success Message -->
+                 <div *ngIf="isSubmitted" class="alert alert-success mt-3 form-group">
+                    done successfully!
+                </div>
+                <div class="form-group mb-3">
+                    <button *ngIf="registerForm.valid" (click)="onSubmit(registerForm)" class="btn btn-primary ">Create Accound </button>   
+                    <button *ngIf="!registerForm.valid" disabled  class="btn btn-primary ">Create Accound  </button>   
+                </div>
+                         <div class="form-group mb-3 text-dark">
+                         <p>Already have an account? <span  routerLink="/login" class="text-primary sign">Login</span> </p>
+                </div>
+            </form>
+       
+            </div>
+        </div>
+        
+       </div>
+        </div>
+ 
+    </div>   
+</section>
