@@ -1,0 +1,35 @@
+section{
+    height: auto;
+    padding: 100px 0px;
+    background-color: black;
+  
+  
+}
+.container{
+    padding: 100px 50px;
+
+}
+.card{
+    width: 90%;
+    height: auto;
+    color: black;
+    font-size: 17px;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 380px;
+ 
+
+
+    
+}
+.card .card-img{
+   width: 30%;
+   height: 100px;
+
+   
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+

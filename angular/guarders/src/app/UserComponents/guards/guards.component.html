@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<section id="guards">
+    <div class="container">
+        <h2 class="m-5 h2">Our Guards</h2>
+        <p class="mb-5 tx">Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus. </p>
+        <div class="row" >
+          <ng-container *ngFor="let guard of (showAll ? guards : guards.slice(0,4)); let index = index">
+            <div class="col-12 col-md-6 col-xl-4 mb-3" >
+                <div class="card" data-aos="zoom-in" >
+                    <div class="image-container overflow-hidden"><img [src]="guard.photo" class="card-img-top img-hover-scale"></div>
+                    <div class="card-body">
+                        <h2 class="card-title">{{guard.name}}</h2>
+                        <p class="card-text">{{guard.description}}</p>
+                    </div>
+                </div>
+            </div>          
+          </ng-container>               
+        </div>
+        <button *ngIf="!showAll && guards.length > 4" (click)="showAll = true" class="btn btn-primary">  SEE ALL </button>
+    </div>
+</section>
+
+
+
+
+

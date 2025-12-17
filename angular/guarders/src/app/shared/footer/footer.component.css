@@ -1,0 +1,104 @@
+section {
+    height: auto;
+}
+section .container{
+    height: auto;
+    padding: 100px 0px;
+    text-align: left;
+    text-align: center;  
+
+   
+   
+}
+
+h2{
+    padding-top: 10px;
+}
+.link{
+    cursor: pointer;
+}
+
+
+
+
+
+.row{
+    justify-content: center;
+    align-items: center;
+
+}
+.row .col{
+    display: flex;
+    
+}
+.copyRight{
+    text-align: center;  
+    padding-top: 40px;
+    font-size: 14px;
+}
+
+.Media i{
+
+    padding-top: 40px;
+    padding-right: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    
+}
+.Media a:hover{
+    color: rgb(176, 176, 181);
+    transition: 0.3s;
+    
+}
+.Media button{
+    border-radius:30px;
+    
+}
+.Media2 p{
+    cursor: pointer;
+}
+.Media2 p i{
+    font-size: 20px;
+    padding-right: 10px;
+
+    
+}
+
+.Media input{
+    padding:  25px;
+    border-radius: 30px;
+}
+.Media input{
+    width: 250px;
+}
+.row div{
+    height: 30vh;
+}
+.link{
+    color: white;
+}
+.li-none{
+    list-style-type: none;
+}
+
+
+
+
+
+@media(max-width:500px){
+    section{
+        text-align: left;
+    }
+    .Media i{
+        text-align: left;
+    }
+    .container{
+        text-align: left;
+    }
+    .copyRight{
+        text-align: left;
+    }
+
+    
+   
+}

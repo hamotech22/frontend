@@ -1,0 +1,93 @@
+header{
+    padding: 7px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+
+section nav{
+    padding: 25px;
+    
+}
+
+nav a{
+    color: white;
+    font-size: 17px;
+    text-transform:capitalize;
+
+}
+
+nav .navbar-brand{
+    color: red;
+    font-size: large;
+    font-size: 30px;
+    font-weight: bold;
+}section nav{
+    padding: 25px;
+    
+}
+nav a{
+    color: white;
+    font-size: 17px;
+    text-transform:capitalize;
+    padding: 5px;
+   
+   
+
+}
+nav a:hover{
+    color: gray;
+    transition: 0.5s;
+
+}
+
+nav .navbar-brand{
+    color: rgb(65, 30, 30);
+    font-size: large;
+    font-size: 30px;
+    font-weight: bold;
+}
+nav .navbar-brand:hover{
+    color: rgb(69, 59, 59);
+   
+}
+
+.drop a{
+    color: black;
+}
+.drop1 a{
+    font-size: 15px;
+    
+}
+.drop1{
+    padding-top: 2px;
+    
+}
+.menu a{
+    cursor: pointer;
+    
+}
+
+.menu{
+    align-items: center;
+    
+}
+span{
+    color: wheat;
+}
+
+.dashboard-btn a{
+    padding: 5px;
+   display: flex;
+   position: relative;
+   bottom: 5px;
+   width: 150px;
+   left: 4px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+    
+    
+}

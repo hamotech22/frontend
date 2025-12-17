@@ -1,0 +1,43 @@
+<section class="bg-primary">
+    <div class="container w-75">
+        <div class="row text-left" *ngFor="let foot of footer">
+            <div class="col-12 col-md-6 col-xl-3 mb-2">
+                <h2>Guardr</h2>
+                <p><a routerLink="/home" (click)="scrollToSection('top')" class="link">{{foot.guardr1}}</a></p>
+                <p><a  class="link" (click)="scrollToSection('about')">{{foot.guardr2}}</a></p>
+                <p><a  (click)="scrollToSection('contact')" class="link">{{foot.guardr3}}</a></p>
+               
+            </div>
+            <div class="col-12  col-md-6 col-xl-3 mb-2">
+                <h2>Useful Link </h2>
+                <p><a  class="link" (click)="scrollToSection('service')" >{{foot.useful1}}</a></p>
+                <p><a routerLink="/termsofus" class="link">{{foot.useful2}}</a></p>
+                <p><a routerLink="/privacypolicy" class="link">{{foot.useful3}}</a></p>
+                
+                
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 mb-2 Media2" >
+                <h2>Contact Us </h2>
+                <p><i class="fa-solid fa-location-dot"></i>{{foot.location}}</p>
+                <p> <i class="fa-solid fa-phone"></i> {{foot.phone}}</p>
+                <p> <i class="fa-solid fa-envelope"></i> {{foot.email}}</p>                               
+            </div>
+            
+            <div class="col-12 col-md-6 col-xl-3 mb-2 Media text-left">
+                <h2>Newslate </h2>  
+                <form #f="ngForm">
+                    <input type="email" placeholder="gmail" name="email" required class="form-control mb-2" [(ngModel)]="newsllater.email" #name="ngModel" required email>
+                    <span class="text-danger " *ngIf="name.touched && name.errors?.['required']">this filed is required</span>
+                    <span class="text-danger " *ngIf="name.touched && name.errors?.['email']">email format error</span>
+                    <span class="text-success p-3" *ngIf="message">successfuly</span>
+             <li class="li-none"> <button type="submit" class="btn btn-dark mt-1" (click)="submit(f)" [disabled]="f.invalid">subscribe</button></li>
+                </form>
+                <a><i class="fa-brands fa-facebook"></i></a>
+                <a><i class="fa-brands fa-telegram"></i></a>
+                <a><i class="fa-brands fa-instagram"></i></a>
+                <a><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div> 
+     <span class="text-center text-white bg-primary m-5 copy">&copy; 2025 Guardr. All rights reserved.</span>   
+</section>

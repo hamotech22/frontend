@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<section id="contact">
+
+    <div class="container w-75">           
+                
+       <form  #f="ngForm">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-center">                    
+            <div class=" text-start">
+                <h2 class="m-5 text-center">Get In Touch</h2>
+                <input type="text" placeholder="Full Name" class="w-100 form-control mt-3" name="name" #name="ngModel" ngModel minlength="10" required [(ngModel)]="addCostamer.name">
+                <span *ngIf=" name.touched && name.errors?.['required'] " class="text-danger "  >this filed is  required</span>     
+                <span *ngIf=" name.touched &&  name.errors?.['minlength']" class="text-danger "  >this input must be at 5 char. </span>  
+                <input type="email" placeholder="Email" class="w-100 form-control mt-3" name="gmail" #gmail="ngModel" ngModel required email [(ngModel)]="addCostamer.gmail">
+                <span *ngIf=" gmail.touched && gmail.errors?.['required'] " class="text-danger "  >this filed is  required</span> 
+                <span *ngIf="gmail.touched && gmail.errors?.['email']" class="text-danger">invalid email format  </span>   
+                <input type="number" placeholder="number " class="w-10 form-control mt-3" name="phone" #number="ngModel" ngModel required [(ngModel)]="addCostamer.phone">
+                <span *ngIf=" number.touched && number.errors?.['required'] " class="text-danger "  >this filed is  required</span>  
+                <textarea class="form-control w-100 mt-3" #text="ngModel" name="message" ngModel required [(ngModel)]="addCostamer.message">Message</textarea>
+                <span *ngIf=" text.touched && text.errors?.['required'] " class="text-danger "  >this filed is  required</span>                                                    
+            </div> 
+      
+            <button  (click)="submit(f)" [disabled]="f.invalid" class="btn btn-primary mt-3">send</button>
+        <!-- Success Message -->
+        <div *ngIf="isSubmitted" class="alert alert-success mt-3">
+            Your message has been sent successfully!
+        </div>
+        </div>   
+       </form>   
+                
+</div>  
+     
+</section>
+
+
+
+
+
+

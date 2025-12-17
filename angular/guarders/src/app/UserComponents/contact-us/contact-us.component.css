@@ -1,0 +1,26 @@
+section{
+    height: auto;
+    padding: 150px 0px;
+    background-image: url(src/assets/images/h3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+   
+    
+    
+}
+button{
+    padding: 10px 50px;
+}
+textarea{
+    padding: 30px;
+}
+.container span{
+    text-align: left;
+}
+h2{
+    font-size: 40px;
+    font-weight: bold;
+}

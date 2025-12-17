@@ -1,0 +1,54 @@
+<section>
+  <nav class="navbar navbar-expand-lg bg-primary text-center fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/home" (click)="scrollToSection('top')">Guards</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto"> <!-- تم تصحيح: استخدام ul هنا بدلاً من div -->
+          <li class="nav-item">
+            <a routerLink="/home"  (click)="scrollToSection('top')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about"  >About</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/our-service"  >Services</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/guards"  >Guards</a>
+          </li>
+          
+          <li class="nav-item">
+            <a routerLink="/contact-us" >Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!isLoggedIn" routerLink="/login" >sign In</a>
+          </li>
+          
+          <span *ngIf="user">
+            <li class="nav-item dropdown drop1">
+              <a class=" dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>hello,{{ user.name }}</span>
+              </a>
+              <ul class="dropdown-menu menu">
+                <li><a class="dropdown-item text-center bg-danger " (click)="logOut()">Log Out</a></li>
+              </ul>
+            </li>
+          </span>
+
+          <li class="nav-item dashboard-btn">
+            <a routerLink="/admin/dashboard" *ngIf="isAdmin"  class=" btn btn-success ms-auto">DASHBOARD</a>
+          </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>
+
+
+

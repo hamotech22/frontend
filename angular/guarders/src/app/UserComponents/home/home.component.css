@@ -1,0 +1,57 @@
+.main{
+  
+    background-image: linear-gradient(rgba(19, 21, 22, 0.7), rgba(20, 21, 22, 0.7)),url('src/assets/images/m2.jpg');
+    /* background-image: linear-gradient(rgba(17, 18, 19, 0.7), rgba(22, 22, 22, 0.7)),url('/assets/images/hero.jpg'); */
+    height: 100vh;
+    background-size: cover;
+    background-position: center 70px  ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+.slide{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slide h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+.slide p{
+    font-size: 14px;
+    
+}
+.hero{
+    display: flex;
+}
+.hero .container{
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:500px){
+    .main{
+        background-position: 70%;
+      
+
+    }
+    .slide h2{
+    font-size: 30px;
+    font-weight: bold;
+    
+   
+}
+.slide p{
+    font-size: 13px;
+    
+}
+}

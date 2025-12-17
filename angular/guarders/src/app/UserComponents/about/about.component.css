@@ -1,0 +1,37 @@
+#about{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 80px;
+    height: auto;
+ 
+  
+  
+}
+
+
+#about .img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#about .img img{
+    width: 130%;
+    height: 400px;
+    padding-top: 40px;
+    
+}
+#about .text{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    right: 90px;
+    top: 170px;
+    padding-bottom: 30px;
+
+}
