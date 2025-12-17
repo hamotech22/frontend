@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+*{
+    scroll-behavior: smooth;
+  
+}
+
+/* scroll top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+
+
+

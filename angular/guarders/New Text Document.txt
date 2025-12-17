@@ -1,0 +1,70 @@
+
+    onLogin(data: any) {
+      // تنفيذ الطلبين معًا باستخدام forkJoin
+      forkJoin({
+        admins: this.http.get(this.url),
+        users: this.http.get(this.url2),
+      }).subscribe({
+        next: ({ admins, users }: any) => {
+          // البحث عن admin
+          const admin = admins.find((item: any) => 
+            item.email == data.email && item.password == data.password
+          );
+    
+          // البحث عن user
+          const user = users.find((item: any) => 
+            item.email ==  data.email && item.password == data.password
+          );
+    
+          if (admin) {
+            localStorage.setItem('user', JSON.stringify(admin));
+            this.router.navigateByUrl('/admin');
+          } else if (user) {
+            localStorage.setItem('user2', JSON.stringify(user));
+          } else {
+            this.message = 'Email or password is incorrect';
+         
+
+          }
+        },
+        error: (err) => {
+          console.error('Error fetching data:', err);
+          this.message = 'An error occurred while logging in. Please try again later.';
+        },
+      });
+    }
+    
+
+
+
+
+
+
+
+
+    
+    onLogin(data:any){
+      this.http.get( this.url ).subscribe((response:any) =>{
+        let admin = response.find((data:any)=>{
+          return(data.email == this.admin.email && data.password == this.admin.password);
+
+        });
+        this.http.get(this.url2).subscribe((response:any) =>{
+          let user = response.find((data:any)=>{
+            return(data.email == this.user.email && data.password == this.user.password);
+          });
+        })
+       
+        if(admin){
+          localStorage.setItem('user', JSON.stringify(admin));
+          this.router.navigateByUrl('/admin');
+
+        } else if(user){
+          localStorage.setItem('user2', JSON.stringify(user));
+          this.router.navigateByUrl('/home');
+        } else{
+          this.message = 'email or password is incorrect'
+        }
+
+      });
+    }
