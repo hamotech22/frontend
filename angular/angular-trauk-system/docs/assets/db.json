@@ -1,0 +1,203 @@
+{
+  "OurTeam": [
+    {
+      "id": "1",
+      "photo": "http://localhost:4200/assets/images/client1.jpg",
+      "name": "Eral Mrtinez",
+      "title": "Marketing"
+    },
+    {
+      "id": "1",
+      "photo": "http://localhost:4200/assets/images/client1.jpg",
+      "name": "Eral Mrtinez",
+      "title": "Marketing"
+    },
+    {
+      "id": "1",
+      "photo": "http://localhost:4200/assets/images/client1.jpg",
+      "name": "Eral Mrtinez",
+      "title": "Marketing"
+    },
+    {
+      "photo": "http://localhost:4200/assets/images/client1.jpg",
+      "name": "ahmed eisa",
+      "title": "full stack web",
+      "id": "2"
+    },
+    {
+      "photo": "",
+      "name": "osama elzero",
+      "title": "front-end web development",
+      "id": "3"
+    },
+    {
+      "photo": "",
+      "name": "mohammed hassan",
+      "title": "full stack web development",
+      "id": "4"
+    }
+  ],
+  "footer": [
+    {
+      "id": "1",
+      "location": "New Yourk city",
+      "phone": "+1234455664",
+      "email": "demo1122@gmail.com"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "fname": "mohamed",
+      "lname": "yahya",
+      "email": "demo1122@gmail.com",
+      "phone": "+1234455664"
+    },
+    {
+      "id": "1",
+      "fname": "mohamed",
+      "lname": "yahya",
+      "email": "demo1122@gmail.com",
+      "phone": "+1234455664"
+    },
+    {
+      "id": "3",
+      "fname": "Adipisci officiis es",
+      "lname": "Rem aut totam fugiat",
+      "email": "Quia qui magnam earu",
+      "phone": "Consectetur exceptu",
+      "txtarea": "Suscipit vitae dolor"
+    },
+    {
+      "fname": "Et dolorem quo incid",
+      "lname": "Vero aut facilis max",
+      "email": "Lorem temporibus sun",
+      "phone": "Quod sint veritatis",
+      "txtarea": "Qui beatae sit nihil",
+      "id": "4"
+    },
+    {
+      "fname": "Quas unde ipsum dol",
+      "lname": "Dolorum aut dolores ",
+      "email": "Dolorum asperiores N",
+      "phone": "Ut necessitatibus eu",
+      "txtarea": "Aliquip est vel id a",
+      "id": "5"
+    },
+    {
+      "fname": "Fugiat repudiandae ",
+      "lname": "Enim nesciunt quasi",
+      "email": "Facere dolor do cupi",
+      "phone": 38,
+      "txtarea": "Quod aliquip est la",
+      "id": "6"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fname": "osama",
+      "lname": "elzero",
+      "email": "osama22@gmail.com",
+      "phone": 9223232322323
+    },
+    {
+      "id": "2",
+      "fname": "osama",
+      "lname": "elzero",
+      "email": "osama22@gmail.com",
+      "phone": 9223232322323
+    },
+    {
+      "fname": "mohammed yahya",
+      "lname": "abdelrahman shareef",
+      "phone": 1279368780,
+      "email": "mohammed@gmail.com",
+      "id": "3"
+    },
+    {
+      "fname": "Veniam non dolore c",
+      "lname": "Totam ipsam quam exc",
+      "email": "mazuvijog@mailinator.com",
+      "phone": 91122242424,
+      "id": "4"
+    },
+    {
+      "fname": "Est aut quas earum ",
+      "lname": "Exercitation nobis a",
+      "email": "hovu@mailinator.com",
+      "phone": 100,
+      "id": "10"
+    },
+    {
+      "fname": "mohammed yahya",
+      "lname": "abdelrahman shareef",
+      "phone": 1279368780,
+      "email": "mohammed@gmail.com",
+      "id": "11"
+    }
+  ],
+  "ourService": [
+    {
+      "id": "1",
+      "photo": "assets/images/services1.png",
+      "description": "سحب السيارات العطلانة (عطل ميكانيكي، مشكلة في البطارية، فراغ الوقود، إلخ)"
+    },
+    {
+      "id": "1",
+      "photo": "assets/images/about2.png",
+      "description": "سحب السيارات بعد الحوادث"
+    },
+    {
+      "id": "1",
+      "photo": "assets/images/services3.png",
+      "description": "النقل بين المدن"
+    },
+    {
+      "id": "1",
+      "photo": "assets/images/services3.png",
+      "description": "فتح أبواب السيارات المقفلة (في حال نسيان المفتاح داخل السيارة)"
+    }
+  ],
+  "contactus": [
+    {
+      "id": "24ef",
+      "name": "mohamed yahya abdelrahman shareef",
+      "location": "sudan cartom",
+      "number": 992244224442
+    },
+    {
+      "id": "24ef",
+      "name": "mohamed yahya abdelrahman shareef",
+      "location": "sudan cartom",
+      "number": 992244224442
+    },
+    {
+      "id": "24ef",
+      "name": "mohamed yahya abdelrahman shareef",
+      "location": "sudan cartom",
+      "number": 992244224442
+    },
+    {
+      "id": "24ef",
+      "name": "mohamed yahya abdelrahman shareef",
+      "location": "sudan cartom",
+      "number": 992244224442
+    },
+    {
+      "id": "24ef",
+      "name": "mohamed yahya abdelrahman shareef",
+      "location": "sudan cartom",
+      "number": 992244224442
+    },
+    {
+      "id": "8430",
+      "name": "حمادة يحي عبدالرحمن شريف",
+      "location": "السودان الابيض",
+      "number": 999989898
+    },
+    {
+      "id": "604d"
+    }
+  ]
+}
