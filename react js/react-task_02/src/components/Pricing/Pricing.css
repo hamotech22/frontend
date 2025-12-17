@@ -1,0 +1,26 @@
+.pricing{
+   
+
+
+     background-color: rgb(245, 242, 242) !important;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+
+.h1{
+  font-weight: bold !important;
+}
+
+/* .pricing .cards { */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* gap: 20px; */
+/* } */
+/*  */
+/* .pricing .cards .col-12 { */
+  /* flex: 0 0 auto !important; */
+  /* width: auto !important; */
+/* } */
+
+

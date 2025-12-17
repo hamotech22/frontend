@@ -1,0 +1,15 @@
+
+.hero{
+    background-color: rgb(180, 43, 43);
+    padding: 50px;
+
+}
+img{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+.navbar{
+     background-color: rgb(238, 230, 230) !important;
+    
+}
