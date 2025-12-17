@@ -1,0 +1,371 @@
+
+
+:root {
+    --white-color: #ffffff;
+    --primary-color: #13547a;
+    --secondary-color: #80d0c7;
+    --section-bg-color: #f0f8ff;
+    --custom-btn-bg-color: #80d0c7;
+    --custom-btn-bg-hover-color: #13547a;
+    --dark-color: #000000;
+    --p-color: #717275;
+    --border-color: #7fffd4;
+    --link-hover-color: #13547a;
+    --body-font-family: 'Open Sans', sans-serif;
+    --title-font-family: 'Montserrat', sans-serif;
+ 
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+
+/*==========================================================================================*/
+/*============================================= global ========================================*/
+/*===========================================================================================*/
+#section1 .title{
+    font-size: 70px;
+}
+
+
+
+
+
+/*==========================================================================================*/
+/*============================================= main ========================================*/
+/*===========================================================================================*/
+
+
+main{
+    padding-top: 100px;
+   height: 40vh;
+   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+   
+}
+
+
+
+.title{
+    color: white;
+    font-size: 70px;
+    
+}
+main p{
+    font-size: 20px;
+}
+main input{
+    width: 60%;
+    height: 70px;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    text-align: center;
+    transition: 0.2s;
+}
+
+main input:focus{
+    transform: scale(1.1);
+    
+}
+
+/* هنا عالجت مشكلة خروج الصفحة بجوانب الموقع */
+
+
+/*==========================================================================================*/
+/*=========================================== global ========================================*/
+/*===========================================================================================*/
+
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+
+
+  span{
+    color: rgb(195, 113, 113);
+  }
+
+
+
+
+  /*==========================================================================================*/
+/*=========================================== navbars ========================================*/
+/*===========================================================================================*/
+header{
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+  nav{
+    text-transform: uppercase;
+    z-index: 1;
+    display: flex;
+
+   
+  
+
+  }
+  nav .nav-link{
+    color: white;
+    margin: 20px;
+   
+  }
+
+
+  nav .navbar-brand{
+    padding-right: 50px;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  nav .brnd{
+    color: red;
+  }
+ 
+
+
+/*------------------------------------------ << load or load >> ------------------------------------- */
+.cover{
+    background-color: #afadad;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    z-index: 1;
+    
+
+
+}
+
+
+/* keyframes */
+.cover-hide{
+    opacity: 0;
+}
+
+.cover .spinner i{
+    font-size: 50px;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    color: rgb(44, 43, 43);
+
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(5turn);
+    }
+}
+/*==========================================================================================*/
+/*=========================================== section_1 ========================================*/
+/*===========================================================================================*/
+
+
+#section1{
+
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    border-radius: 100px;
+    height: 130vh;
+    padding-bottom: 20px;
+    
+}
+
+
+
+/*============================================================================================*/
+/*========================================== SECTION_2 ========================================*/
+/*=============================================================================================*/
+#section2{
+
+    padding: 100px 0px;
+
+    
+}
+
+
+
+#section2 .card{
+    width: 100%;
+}
+
+
+
+/*============================================================================================*/
+/*========================================== SECTION_3 ========================================*/
+/*=============================================================================================*/
+
+#section3{
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-image: linear-gradient(rgba(0, 100, 150, 0.7), rgba(0, 100, 150, 0.7)), url(assets/images/colleagues-working-cozy-office-medium-shot.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: auto;
+    padding-top: 50px;
+  
+   
+    
+   
+}
+
+/*==========================================================================================*/
+/*========================================== cards ========================================*/
+/*===========================================================================================*/
+
+
+.card{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border: none;
+    margin-bottom: 20px;
+
+  
+}
+.cards{
+    height: auto;
+    padding: 50px;
+ 
+}
+.cards .card{
+    height: 400px;
+  
+}
+
+.cards .card img{
+    height: 65%;
+}
+
+/* #section1 .card-home-1{
+    background-image: url(/assets/images/topics/undraw_Remote_design_team_re_urdx.png);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+ 
+  
+} */
+
+#section1 .card-home{
+    background-image: linear-gradient(rgba(0, 100, 150, 0.7), rgba(0, 100, 150, 0.7)), url(/assets/images/rear-view-young-college-student.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    
+}
+
+
+.card:hover{
+    transform: translateY(-10px);
+    transition: all 0.6s;
+}
+.card-1 a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--primary-color);
+    
+}
+.card-1 a:hover{
+    border-bottom: 2px solid var(--primary-color);
+
+}
+
+
+
+.accordion{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+#section4 img{
+    padding-top: 50px;
+  
+    
+}
+
+
+
+/*==========================================================================================*/
+/*========================================== section 5 ========================================*/
+/*===========================================================================================*/
+#section5{
+
+    height: auto;
+   padding: 100px 0px;
+   background-color: #e9ecec;
+}
+
+
+
+
+
+
+/*==========================================================================================*/
+/*========================================== footer ========================================*/
+/*===========================================================================================*/
+
+footer {
+    padding: 50px;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    color: var(--primary-color);
+   
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*==========================================================================================*/
+/*========================================== media ========================================*/
+/*===========================================================================================*/
+@media(max-width:767px){
+    #section1{
+        height: auto;
+        
+    }
+    #section2{
+        height: auto;
+        
+    }
+    #section2 a{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+}
+
+@media(max-width:575px){
+    #section2{
+        height: auto;
+        
+    }
+}
